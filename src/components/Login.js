@@ -4,7 +4,7 @@ import "../styles/main.css";
 import { UserContext } from "../context/UserContext";
 
 const Login = () => {
-  const history = useHistory();
+  let history = useHistory();
   const [_, setUser] = useContext(UserContext);
   return (
     <div className="w-full max-w-xs m-auto mt-32">

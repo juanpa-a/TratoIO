@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [user, setUser] = useContext(UserContext);
-  const userIsLoggedIn = user.name === "" ? false : true;
+const Navbar = ({ userIsLoggedIn }) => {
+  const [user] = useContext(UserContext);
+  // const userIsLoggedIn = user.name === "" ? false : true;
   const history = useHistory();
 
   return (
